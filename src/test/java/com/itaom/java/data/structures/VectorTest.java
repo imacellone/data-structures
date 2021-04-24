@@ -53,9 +53,7 @@ public class VectorTest {
         Vector<Student> vector = new Vector<>();
         Student s1 = new Student("John");
         vector.add(s1);
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            vector.get(1);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> vector.get(1));
     }
 
     @Test
@@ -90,9 +88,7 @@ public class VectorTest {
         Vector<Student> vector = new Vector<>();
         vector.add(0, new Student("John"));
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            vector.add(2, new Student("Alice"));
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> vector.add(2, new Student("Alice")));
     }
 
     @Test
@@ -118,9 +114,7 @@ public class VectorTest {
         assertThat(vector.size()).isEqualTo(2);
         assertThat(vector.get(0)).isEqualTo(s1);
         assertThat(vector.get(1)).isEqualTo(s3);
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            vector.get(2);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> vector.get(2));
     }
 
     @Test
@@ -130,9 +124,7 @@ public class VectorTest {
 
         vector.add(0, new Student("John"));
 
-        assertThrows(IndexOutOfBoundsException.class, () -> {
-            vector.remove(1);
-        });
+        assertThrows(IndexOutOfBoundsException.class, () -> vector.remove(1));
     }
 
     @Test
